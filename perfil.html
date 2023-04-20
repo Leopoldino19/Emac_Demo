@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Perfil</title>
+    <link
+      rel="shortcut icon"
+      href="/static/img/logo-emac.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+    <style>
+        body{
+            background-color: #FFF;
+        }
+
+        .icone{
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+        .icone:hover{
+            -webkit-transform: scale(1.5);
+            transform: scale(1.1);
+        }
+    </style>
+  </head>
+  <body>
+      <main>
+        <header class="p-3 mb-3 border-bottom" style="background-color: #EC7253;">
+            <div class="container" >
+              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+                  <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+        
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                  <li><a href="#" class="nav-link px-2 link-light"><img src="./logo-emac.png" alt="" width="50rem"><br><h5>EMAC</h5></a></li>
+
+                  <!-- <li><a href="#" class="nav-link px-2 link-light">Inventory</a></li>
+                  <li><a href="#" class="nav-link px-2 link-light">Customers</a></li>
+                  <li><a href="#" class="nav-link px-2 link-light">Products</a></li> -->
+                </ul>
+        
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                  <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                </form>
+        
+                <div class="dropdown text-end">
+                  <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                  </a>
+                  <ul class="dropdown-menu text-small" style="vertical-align: inherit; background-color: #EC7253;">
+                    <li><a class="dropdown-item text-white" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Olá, Usuário</font></font></a></li>
+
+                    <li><hr class="dropdown-divider"></li>
+        
+                    <li><a class="dropdown-item text-white" href=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alterar dados</font></font></a></li>
+                    <li><a class="dropdown-item text-white" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Redefinir senha</font></font></a></li>
+                    <li><a class="dropdown-item text-white" href=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Configurações</font></font></a></li>
+
+                    <li><hr class="dropdown-divider"></li>
+
+                    <li><a class="dropdown-item text-white" href="./index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sair</font></font></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </header>  
+      </main>
+      <div class="container-fluid" style="background-color: #E08E79">
+        <div class="row">
+          <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
+            <div class="position-sticky pt-3 sidebar-sticky" style="background-color: #EC7253;">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active text text-light" aria-current="page" href="./index.html">
+                    <i class="bi bi-house-fill" style="font-size: 1.4rem;"></i>
+                    Home
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="./pesquisadores.html">
+                    <i class="bi bi-people-fill" style="font-size: 1.4rem;"></i>
+                    Equipe
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart align-text-bottom" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    Products
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-text-bottom" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    Equipe
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2 align-text-bottom" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    Reports
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers align-text-bottom" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    Integrations
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Permissões User -->
+              <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+                <span class="text-light">User</span>
+                <a class="link-light" href="#" aria-label="Add a new report">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle align-text-bottom" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                </a>
+              </h6>
+              <ul class="nav flex-column mb-2">
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text align-text-bottom" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Cadastrar Alertas
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text align-text-bottom" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Cadastrar Categorias
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text align-text-bottom" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Cadastrar Consumo
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text align-text-bottom" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Cadastrar Residencias
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Permissões Admin -->
+              <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+                <span class="text-light">Admin</span>
+                <a class="link-light" href="#" aria-label="Add a new report">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle align-text-bottom" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                </a>
+              </h6>
+              <ul class="nav flex-column mb-2">
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text align-text-bottom" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Cadastrar Alertas
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text align-text-bottom" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Cadastrar Categorias
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text align-text-bottom" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Cadastrar Consumo
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text align-text-bottom" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    Cadastrar Residencias
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+      
+          <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+              <h1 class="h2 text-light">Perfil: Usuário</h1>
+            </div>
+            
+            <div class="row"><!--col col-12 col-sm-6 col-md-4 col-lg-2 col-xl-1-->
+              <div class="col col-md-4">
+                <a href="#" class="btn btn-outline-dar">
+                    <div class="card bg-dar icone" style="background-color: #EC7253;">
+                        <div class="card-body">
+                          <h5 class="card-title text-light">CARD</h5>
+                          <p class="card-text text-light">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                      </div>
+                </a>
+              </div>
+              <div class="col col-md-4">
+                <a href="#" class="btn btn-dar">
+                    <div class="card bg-dar icone" style="background-color: #EC7253;">
+                        <div class="card-body">
+                          <h5 class="card-title text-light">CARD</h5>
+                          <p class="card-text text-light">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                      </div>
+                </a>
+              </div>
+              <div class="col col-md-4">
+                <a href="#" class="btn btn-dar">
+                    <div class="card bg-dar icone" style="background-color: #EC7253;">
+                        <div class="card-body">
+                          <h5 class="card-title text-light">CARD</h5>
+                          <p class="card-text text-light">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                      </div>
+                </a>
+              </div>
+          </div><br>
+
+          <div class="row">           
+            <div class="col col-md-4">
+              <a href="#" class="btn btn-dar">
+                <div class="card bg-dar icone" style="background-color: #EC7253;">
+                    <div class="card-body">
+                      <h5 class="card-title text-light">CARD</h5>
+                      <p class="card-text text-light">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+              </a>
+            </div>
+              <div class="col col-md-4">
+                <a href="#" class="btn btn-dar">
+                    <div class="card bg-dar icone" style="background-color: #EC7253;">
+                        <div class="card-body">
+                          <h5 class="card-title text-light">CARD</h5>
+                          <p class="card-text text-light">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                      </div>
+                </a>
+              </div>
+            <div class="col col-md-4">
+                <a href="#" class="btn btn-dar">
+                    <div class="card bg-dar icone" style="background-color: #EC7253;">
+                        <div class="card-body">
+                          <h5 class="card-title text-light">CARD</h5>
+                          <p class="card-text text-light">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                      </div>
+                </a>
+              </div>
+          </div><br>
+
+          <div class="row">           
+            <div class="col col-md-4">
+              <a href="#" class="btn btn-dar">
+                <div class="card bg-dar icone" style="background-color: #EC7253;">
+                    <div class="card-body">
+                      <h5 class="card-title text-light">CARD</h5>
+                      <p class="card-text text-light">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+              </a>
+            </div>
+              <div class="col col-md-4">
+                <a href="#" class="btn btn-dar">
+                    <div class="card bg-dar icone" style="background-color: #EC7253;">
+                        <div class="card-body">
+                          <h5 class="card-title text-light">CARD</h5>
+                          <p class="card-text text-light">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                      </div>
+                </a>
+              </div>
+            <div class="col col-md-4">
+                <a href="#" class="btn btn-dar">
+                  <div class="card bg-dar icone" style="background-color: #EC7253;">
+                    <div class="card-body">
+                      <h5 class="card-title text-light">CARD</h5>
+                      <p class="card-text text-light">With supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+          </div><br>
+      
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+      
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
