@@ -1,43 +1,495 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesquisadores</title>
-    <link rel="shortcut icon" href="/static/img/logo-emac.png" type="image/x-icon">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>EMAC - Pesquisadores</title>
+    <link rel="shortcut icon" href="./img/logo-emac.png" type="image/x-icon">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"> <!--Biblioteca do Bootstrap-->
-</head>
-<body>
-    {% include './bases/cabecalho.html' %}
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/features/">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    
 
-    <main>
-        <div class="row">
-            <div class="col-3 text-center m-2">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-              <h2 class="fw-normal">Pesquisador</h2>
-              <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-              <p><a class="btn btn-secondary" href="#">Ver detalhes »</a></p>
-            </div><!-- /.col-lg-4 -->
+    
 
-            <div class="col-3 text-center m-2">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-              <h2 class="fw-normal">Pesquisador</h2>
-              <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-              <p><a class="btn btn-secondary" href="#">Ver detalhes »</a></p>
-            </div><!-- /.col-lg-4 -->
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-            <div class="col-3 text-center m-2">
-                <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-              <h2 class="fw-normal">Pesquisador</h2>
-              <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-              <p><a class="btn btn-secondary" href="#">Ver detalhes »</a></p>
-            </div><!-- /.col-lg-4 -->
+    <style>
+              
+          body{
+                background-color: #E08E79; /*#E08E79 - Header e Footer; #F1D4AF - Main*/
+            }
 
-          </div>        
-    </main>
+            .icone, .icone-social{
+                transition: all 0.5s;
+                cursor: pointer;
+            }
+            
+            .icone:hover{
+                -webkit-transform: scale(1.5);
+                transform: scale(1.1);
+            }
+            
+            .icone-social{
+                transition: all 0.5s;
+                cursor: pointer;
+            }
 
-    {% include './bases/rodape.html' %}
-</body>
+            .icone-social:hover{
+                -webkit-transform: scale(1.5);
+                transform: scale(1.4);
+            }
+        
+
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      
+      .topi{
+        margin-top: 80px;
+      }
+      a{
+        
+        text-decoration: none;
+        color: rgb(206, 155, 15);
+      }
+
+      .botoes{
+        text-align: center;
+        /* padding-top: 10em; */
+      }
+
+      button {
+        margin: 8px;
+      }
+
+      .custom-btn {
+        width: 110px;
+        height: 40px;
+        color: #fff;
+        border-radius: 5px;
+        padding: 1px 2px; /*Antes: 10px 25px*/
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        box-shadow:inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+        7px 7px 20px 0px rgba(0,0,0,.1),
+        4px 4px 5px 0px rgba(0,0,0,.1);
+        outline: none;
+      }
+
+      .btn-1 {
+        background: rgb(238, 118, 85);  /*#EC7253 = rgb(238, 118, 85)*/
+        background: linear-gradient(0deg, rgb(238, 118, 85) 0%, rgb(207, 103, 74) 100%);
+        border: none;
+      }
+
+      .btn-1:hover {
+        background: rgb(204, 101, 73);
+        background: linear-gradient(0deg, rgba(204, 101, 73) 0%, rgb(188, 95, 69) 100%);
+      }
+     
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+  </head>
+  <body>
+  <!-- Cabeçalho novo -->
+  <div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <img src="./img/logo-emac.png" alt="Logo emac" width="50rem" height="50rem">
+        <span class="fs-4 text-white">Emac</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link text-white">Artigos</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white">Projetos</a></li>
+        <li class="nav-item"><a href="./pesquisadores.html" class="nav-link text-white">Pesquisadores</a></li>
+        <li class="nav-item"><a href="./noticia.html" class="nav-link text-white">Notícias</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white">Eventos</a></li>
+        <li class="nav-item"><a href="#" class="nav-link text-white">Sobre</a></li>
+      </ul>
+
+      <div class="col-md-3 text-end">
+        <div class="botoes">
+          <button class="custom-btn btn-1"><a class="text-decoration-none text-white" href="./login.html">Login</a></button>
+          <button class="custom-btn btn-1"><a class="text-decoration-none text-white" href="./registro.html">Cadastro</a></button>
+          <!-- <button class="custom-btn btn-1"><a class="text-decoration-none text-white" href="./perfil.html">Perfil</a></button> -->
+        </div>
+      </div>
+    </header> 
+
+    <header class="py-3">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <span class="fs-2 text-white mb-4">Grupo de Pesquisa Educação Matemática e Cultura</span>
+      </div>
+    </header>
+</div>
+<main class="container">
+
+<div class="topi" >
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+        <div class="col p-4 d-flex flex-column position-static">
+      
+          <h3 class="mb-0">Ademir Caldeira</h3>
+          <br>
+          <p class="card-text mb-auto">Professor Associado IV do Departamento de Metodologia de Ensino da Universidade Federal de São Carlos. Possui pós doutoramento na Universidade NOVA de Lisboa.</p>
+          
+          <a href="http://lattes.cnpq.br/8185048034258055" class="stretched-link">Saiba mais</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4727505Y4" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+    </div>
+
+
+       <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+        <div class="col p-4 d-flex flex-column position-static">
+      
+          <h3 class="mb-0">Aline Coury</h3>
+          <br>
+          <p class="card-text mb-auto">Doutora em Educação pelo Programa de Pós Graduação em Educação da Universidade Federal de São Carlos (2023). </p>
+          
+          <a href=" http://lattes.cnpq.br/4688805153426529" class="stretched-link">Saiba mais</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4367883A2" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+        <div class="col p-4 d-flex flex-column position-static">
+      
+          <h3 class="mb-0">Betina Cambi</h3>
+          <br>
+          <p class="card-text mb-auto">Possui Mestrado e Doutorado em Educação desenvolvidos pela Universidade Federal de São Carlos (UFSCar). É membro do grupo de pesquisa Educação Matemática e Cultura. </p>
+          
+          <a href="http://lattes.cnpq.br/3060279988975263" class="stretched-link">Saiba mais</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4388584U3" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+        <div class="col p-4 d-flex flex-column position-static">
+      
+          <h3 class="mb-0">Bruna Zution Dalle</h3>
+          <br>
+          <p class="card-text mb-auto">Mestre e Doutora em Educação, linha de Educação em Ciências e Matemática, pela Universidade Federal de São Carlos (UFSCar). </p>
+          
+          <a href="http://lattes.cnpq.br/4707006822711579" class="stretched-link">Saiba mais</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4418954H4" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+        <div class="col p-4 d-flex flex-column position-static">
+      
+          <h3 class="mb-0">Denise Vilela</h3>
+          <br>
+          <p class="card-text mb-auto">Possui doutorado em Educação Matemática pela Unicamp (2007). Desde 2008 é docente da Universidade Federal de São Carlos, Departamento de Metodologia de Ensino (DME). </p>
+          
+          <a href="http://lattes.cnpq.br/8155152145332951" class="stretched-link">Saiba mais</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="https://th.bing.com/th/id/OIP.uyqsfKYSxPDF0jX6M60RSAHaIt?pid=ImgDet&w=884&h=1040&rs=1" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+        <div class="col p-4 d-flex flex-column position-static">
+      
+          <h3 class="mb-0">José Vilani</h3>
+          <br>
+          <p class="card-text mb-auto"> Doutor em Educação pela Universidade Federal de São Carlos - UFSCAR (2017). Professor do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte (IFRN). </p>
+          
+          <a href="http://lattes.cnpq.br/3915260629619142" class="stretched-link">Saiba mais</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4206120P5" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+        <div class="col p-4 d-flex flex-column position-static">
+      
+          <h3 class="mb-0">Luzia Fernandes</h3>
+          <br>
+          <p class="card-text mb-auto">Doutora em Educação pela Universidade Federal de São Carlos, mestra em Educação pela Faculdade de Educação da Unicamp, na linha de pesquisa de Educação Matemática (2014).</p>
+          
+          <a href="http://lattes.cnpq.br/6818023438968189" class="stretched-link">Saiba mais</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4485553P8" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+        <div class="col p-4 d-flex flex-column position-static">
+      
+          <h3 class="mb-0">Carolina Magnus</h3>
+          <br>
+          <p class="card-text mb-auto">Possui Mestrado em Educação Científica e Tecnológica pela Universidade Federal de Santa Catarina (2012). Doutorado em Educação pela Universidade Federal de São Carlos (2018).</p>
+          
+          <a href="http://lattes.cnpq.br/8833378888046394" class="stretched-link">Saiba mais</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4439466H7" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 ">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+        <div class="col p-4 d-flex flex-column position-static">
+      
+          <h3 class="mb-0">Vania Rodrigues</h3>
+          <br>
+          <p class="card-text mb-auto">Mestra em Ciências Matemáticas pela Universidade Estadual Paulista Júlio de Mesquita Filho (UNESP), doutora em Educação pela Universidade Federal de São Carlos (UFSCar).</p>
+          
+          <a href="http://lattes.cnpq.br/3490615524948327" class="stretched-link">Saiba mais</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4737229E3" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 ">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+        <div class="col p-4 d-flex flex-column position-static">
+      
+          <h3 class="mb-0">Waléria Martins</h3>
+          <br>
+          <p class="card-text mb-auto">Possui Mestrado em Engenharia Elétrica pela Universidade Estadual Paulista Júlio de Mesquita Filho (2003) e Doutorado em Educação pela Universidade Federal de São Carlos (2018).</p>
+          
+          <a href="http://lattes.cnpq.br/3951161839235387" class="stretched-link">Saiba mais</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="https://www.wena.my/wp-content/uploads/2018/12/profile_w.jpg" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+        <div class="col p-4 d-flex flex-column position-static">
+      
+          <h3 class="mb-0">Petrina Nogueira</h3>
+          <br>
+          <p class="card-text mb-auto">Professora de Matemática da Universidade do Estado de Minas Gerais - UEMG no campus Divinópolis. Membro do Núcleo Docente Estruturante (NDE) do curso de Licenciatura Matemática.</p>
+          
+          <a href="#" class="stretched-link">Saiba mais</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="https://www.wena.my/wp-content/uploads/2018/12/profile_w.jpg" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-light">
+        <div class="col p-4 d-flex flex-column position-static">
+      
+          <h3 class="mb-0">Maria Emília Silva</h3>
+          <br>
+          <p class="card-text mb-auto">Doutorado em andamento em Programa de Pós Graduação em Educação pela Universidade Federal de São Carlos, UFSCAR, Brasil. Orientadora: Dra. Denise Silva Vilela, 2020.          </p>
+          
+          <a href="#" class="stretched-link">Saiba mais</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img src="https://www.wena.my/wp-content/uploads/2018/12/profile_w.jpg" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></svg>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>  
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        Sobre o Grupo
+      </h3>
+
+
+        <h2>Quem Somos?</h2>
+        <p>This is an example blockquote in action:</p>
+        <blockquote class="blockquote">
+          <p>Quoted text goes here.</p>
+        </blockquote>
+        <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+       
+<br>      
+       
+       
+        <h3>Repercussões dos trabalhos do grupo</h3>
+        <p>Com base no pressuposto de práticas culturais o grupo propõe-se a desenvolver um programa de estudos investigativos em educação, em diferentes perspectivas teóricas. Esse espectro de investigações repercute, por meio dos estudantes que finalizam sua formação e passam a atuar na formação de professores e na educação básica. Destaca-se também as contribuições para o desenvolvimento da pesquisa na área da Educação e da Educação Matemática em particular. Posicionamentos diante de políticas de Educação são discutidos e encaminhados via Universidade e entidades representativas.</p>
+
+<br>
+        <h2>Identificação</h2>
+        <ul>
+          <li><strong>Situação do grupo:</strong> Certificado <code class="language-plaintext highlighter-rouge"></code></li>
+          <li><strong>Ano de formação:</strong> 2013 <code class="language-plaintext highlighter-rouge"></code></li>
+          <li><strong>Data da Situação:</strong> 27/05/2021 10:45 <code class="language-plaintext highlighter-rouge"></code></li>
+          <li><strong>Líder(es) do grupo:</strong> Denise Silva Vilela<code class="language-plaintext highlighter-rouge"></code></li>
+          <li><strong>Área predominante:</strong> Ciências Humanas; Educação<code class="language-plaintext highlighter-rouge"></code></li>
+          <li><strong>Instituição do grupo:</strong> Universidade Federal de São Carlos - UFSCAR <code class="language-plaintext highlighter-rouge"></code></li>
+          <li><strong>Unidade:</strong> Centro de Educação e Ciências Humanas<code class="language-plaintext highlighter-rouge"></code></li>
+        </ul>
+
+<br>
+        <h2>Endereço / Contato</h2>
+        <ul>
+          <li><strong>Logradouro:</strong> Universidade Federal de São Carlos<code class="language-plaintext highlighter-rouge"></code></li>
+          <li><strong>Número:</strong> km235 <code class="language-plaintext highlighter-rouge"></code></li>
+          <li><strong>Bairro: </strong> Jardim Guanabara <code class="language-plaintext highlighter-rouge"></code></li>
+          <li><strong>UF:</strong> SP<code class="language-plaintext highlighter-rouge"></code></li>
+          <li><strong>Localidade: </strong> São Paulo<code class="language-plaintext highlighter-rouge"></code></li>
+          <li><strong>CEP:</strong> 13565905 <code class="language-plaintext highlighter-rouge"></code></li>
+          <li><strong>Caixa Postal: </strong> 13564335<code class="language-plaintext highlighter-rouge"></code></li>
+
+        </ul>
+<br>
+        <h2>Contato do Grupo</h2>
+        <ul>
+          <li><strong>Telefone:</strong> (16) 3351-8663 <code class="language-plaintext highlighter-rouge"></code></li>
+          <li><strong>Contato do grupo:</strong> denisevilela@ufscar.br <code class="language-plaintext highlighter-rouge"></code></li>
+        </ul>
+      </article>
+<br>
+
+
+ <button type="button" class="btn-login btn btn-outline-light me-2" style="background-color: #EC7253;">
+        <a  href="http://dgp.cnpq.br/dgp/espelhogrupo/734194" class="nav-link text-white">Saiba Mais</a>
+ 
+ </button>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-light rounded">
+          <h4 class="fst-italic">EMAC</h4>
+          <p class="mb-0">Grupo de Pesquisa em Educação Matemática e Cultura.</p>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Currículo lattes</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="http://lattes.cnpq.br/8185048034258055" class="nav-link text-white">Ademir Caldeira</a></li>
+            <li><a href="http://lattes.cnpq.br/4688805153426529" class="nav-link text-white">Aline Coury</a></li>
+            <li><a href="http://lattes.cnpq.br/3060279988975263" class="nav-link text-white">Betina Cambi</a></li>
+            <li><a href="http://lattes.cnpq.br/4707006822711579" class="nav-link text-white">Bruna Zution Dalle</a></li>
+            <li><a href="http://lattes.cnpq.br/8155152145332951" class="nav-link text-white">Denise Vilela</a></li>
+            <li><a href="http://lattes.cnpq.br/3915260629619142" class="nav-link text-white">José Vilani</a></li>
+            <li><a href="http://lattes.cnpq.br/6818023438968189" class="nav-link text-white">Luzia Fernandes</a></li>
+            <li><a href="http://lattes.cnpq.br/8833378888046394" class="nav-link text-white">Carolina Magnus</a></li>
+            <li><a href="http://lattes.cnpq.br/3490615524948327" class="nav-link text-white">Vania Rodrigues</a></li>
+            <li><a href="http://lattes.cnpq.br/3951161839235387" class="nav-link text-white">Waléria Martins</a></li>
+            <li><a href="#" class="nav-link text-white">Petrina Nogueira</a></li>
+            <li><a href="#" class="nav-link text-white">Maria Emília Silva</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="blog-footer">
+ 
+</footer>
+
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
 </html>

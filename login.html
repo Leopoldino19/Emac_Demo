@@ -1,23 +1,80 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="./css/login.css">
-  </head>
-  <body>
-    <div class="container">
-      <form>
-        <p><img src="./logo-emac.png" alt="" width="70px"></p>
-        <h1>Login</h1>
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <input type="submit" value="Entrar">
-        <div class="links">
-          <a href="./cadastro.html">Criar Conta</a>
-          <a href="#">Esqueci minha senha</a>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMAC - Login</title>
+    <link rel="shortcut icon" href="./img/logo-emac.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/login.css"> 
+    <style type="text/css">
+
+        .terms {
+    color: #f4f5f7;     
+    font-size: 13px;
+  }
+  
+  .terms a {
+    text-decoration: none;
+    color: #EC7253;
+  }
+  
+  .terms a:hover {
+    text-decoration: underline;
+  }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./img/logo-emac.png" alt="Logo">
+            </a>
         </div>
-      </form>
     </div>
-  </body>
+
+    <div class="login_body"> 
+        <div class="login_box">
+            <h2>Entrar</h2>
+            <form method="post">
+                <div class="input_box">
+                    <input required type="text" name="usuario" placeholder="CPF" required placeholder="CPF">
+                </div>
+
+                <div class="input_box">
+                    <input required type="password" name="senha" placeholder="Senha">
+                </div>
+
+                <div>
+                    <a href="./perfil.html">
+                      <button class="submit">
+                        Entrar
+                    </button>
+                    </a>
+                </div>
+            </form>
+
+            <div class="support">
+                <div class="remember">
+                    <span><input type="checkbox" style="margin: 0;padding: 0; height: 13px;"></span>
+                    <span>Lembre-se de mim</span>
+                </div>
+                <div class="help">
+                    <a href="#">
+                        Esqueci minha senha
+                    </a>
+                </div>
+            </div>
+
+            <div class="login_footer">
+                <div class="login_footer">
+                    <div class="terms">
+                        <p>Não possui uma conta? <a href="./registro.html">Cadastre-se!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

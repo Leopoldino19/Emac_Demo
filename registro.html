@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMAC - Registro</title>
+    <link rel="shortcut icon" href="./img/logo-emac.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/registro.css">
+    <style type="text/css">
+
+        .login_body {
+            padding: 60px;
+            z-index: 90;
+            position: relative;
+            max-width: 450rem;
+            height: 990px;   
+            margin-left: 50%;
+            background-color: rgb(168, 84, 84);
+            border-radius: 10px;
+            box-sizing: border-box;
+            transform: translateX(-50%);
+        }
+        .login_body button:hover {
+        background-color: #e04e2a; /*botton*/
+         cursor: pointer;
+}
+.dif{
+    background-color: #e04e2a; /*botton*/
+}
+select{
+          background-color: #E08E79;
+          
+        }
+
+        select:hover{
+            background-color: #5c3131;
+        }
+            option{
+                background-color: #5c3131;
+            }
+     </style>
+</head>
+<body>
+        <div class="header">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/logo-emac.png" alt="Logo Emac">
+                </a>
+            </div>
+        </div>
+      </div>
+
+
+    <div class="login_body">
+        <div class="login_box">
+            <h2>Cadastro</h2>
+            <form method="post">
+                <div class="input_box">
+                    <label for="nomecompleto"><strong>Nome Completo</strong></label><br>
+                    <input type="text" name="nomecompleto" placeholder="Nome completo" required>
+                </div>
+                
+                <div class="input_box">
+                    <label for="usuario"><strong>Usuário</strong></label><br>
+                    <input type="text" name="usuario" placeholder="Nome de Usuário" required>
+                </div>
+                
+                <div class="input_box">
+                    <label for="cpf"><strong>CPF</strong></label><br>
+                    <input type="number" name="cpf" placeholder="000.000.000-00" required>
+                </div>
+
+                <div class="input_box">
+                    <label for="email"><strong>E-mail</strong></label><br>
+                    <input type="email" name="email" placeholder="nome@email.com" required>
+                </div>
+   
+                <div class="input_box">
+                    <label for="telefone"><strong>Telefone</strong></label><br>
+                    <input type="tel" name="telefone" placeholder="(88) 99999-9999" required>
+                </div>
+
+                <div class="input_box">
+                    <label for="categoria"><strong>Categoria de Usuário</strong></label><br>
+                    <select id="categoria" name="categoria" required>
+                        <option selected="" disabled="" value="">Selecione</option>
+                        <option value="professor">Professor</option>
+                        <option value="aluno">Aluno</option>
+                      </select>
+                </div>
+
+                <div class="input_box">
+                    <label for="senha"><strong>Senha</strong></label><br>
+                    <input type="password" name="senha" placeholder="Digite sua senha" required>
+                </div>
+
+                <div class="input_box">
+                    <label for="categoria"><strong>Confirmar senha</strong></label><br>
+                    <input type="password" name="senha" placeholder="Confirme sua senha" required>
+                </div>
+
+               <a href="./login.html">
+                <input class="btn" type="submit" value="Cadastrar">
+               </a>
+            </form>
+
+            <div class="login_footer">
+                <div class="terms">
+                    <p>Já possui uma conta? <a href="./login.html">Realizar login!</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

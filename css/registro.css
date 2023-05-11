@@ -9,6 +9,7 @@ body {
   background-repeat: repeat;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 /*
 body::before {
   content: '';
@@ -33,17 +34,28 @@ body::before {
   z-index: 10;
 }
 
-.login_body {
-  padding: 60px;
-  z-index: 90;
-  position: relative;
-  max-width: 450px;
-  height: 470px; /* Add */
-  margin-left: 50%;
-  background-color: rgb(168, 84, 84);
-  border-radius: 10px;
+/* Add */
+label{
+  font-size: 16px;
+  color: #fff;
+  margin-top: 0;
+}
+
+/* Add */
+select{
+  font-size: 16px;
+  color: #000;
+  margin-top: 0;
+
+  color: #fff;
+  height: 50px;
+  width: 100%;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  padding-left: 15px;
   box-sizing: border-box;
-  transform: translateX(-50%);
+  outline: none;
 }
 
 .login_body h2 {
@@ -68,11 +80,16 @@ body::before {
   background-color: #5c3131;
   }
 
+/* Add */
+select:hover {
+  background-color: #444;
+}
+
 .input_box {
   margin-bottom: 25px;
 }
 
-.login_body button {
+.login_body input.btn {
   height: 50px;
   width: 100%;
   color: #fff;
@@ -84,7 +101,7 @@ body::before {
   margin-bottom: 10px;
 }
 
-.login_body button:hover {
+.login_body input:hover.btn   {
   background-color: #e04e2a; /*botton*/
   cursor: pointer;
 }
@@ -114,7 +131,7 @@ body::before {
 
 .help a {
   text-decoration: none;
-  color: #fffdfd;
+  color: #737373;
 }
 
 .help a:hover {
@@ -135,16 +152,17 @@ body::before {
 
 .login_facebook span a {
   text-decoration: none;
-  color: #f7f2f2;
-}
-
-.sign_up {
-  color: #fffdfd;
-  font-size: 16px;
+  color: #737373;
 }
 
 .sign_up a {
   color: #EC7253;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.sign_up a {
+  color: #fff;
   font-size: 16px;
   text-decoration: none;
 }
@@ -166,3 +184,4 @@ body::before {
 .terms a:hover {
   text-decoration: underline;
 }
+
